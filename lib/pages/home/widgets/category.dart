@@ -47,7 +47,7 @@ class CategorySection extends StatelessWidget {
                   itemBuilder: ((context , index) => Container(
                     height: 50,
                     width: 50,
-                    color: Colors.deepOrangeAccent,
+                    color: Colors.red,
                   )), 
                 separatorBuilder: ((context , index) => const SizedBox(
                   width: 33,
