@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_app/pages/home/widgets/header.dart';
+import 'package:my_first_flutter_app/pages/home/widgets/popular.dart';
 import 'package:my_first_flutter_app/pages/home/widgets/search.dart';
 import 'package:my_first_flutter_app/pages/home/widgets/category.dart';
 
@@ -24,7 +25,7 @@ class HomePage extends StatelessWidget {
                     Positioned(
                         right: 0,
                         height: 200,
-                        child: Transform(transform: Matrix4.identity()..rotateZ(20),
+                        child: Transform(transform: Matrix4.identity()..rotateZ(20),   
                         origin: const Offset(180, 100), 
                         child: Image.asset('assets/images/bg_liquid.png',
                         width: 200,
@@ -33,8 +34,8 @@ class HomePage extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        HeaderSection(),
-                        SearchSection(),
+                        const HeaderSection(),
+                        const SearchSection(),
                         CategorySection(),
                       ],
                     )
@@ -84,7 +85,7 @@ class HomePage extends StatelessWidget {
               child: const Icon(
                 Icons.home_rounded,
                 size: 30,
-                color: Colors.grey,
+                color: Color(0xFF5F67EA),
               ),
             ),
           ),
@@ -111,7 +112,7 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: Colors.grey.withOpacity(0.2),
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(15),
               ),
               child: const Icon(
                 Icons.play_arrow_rounded,
