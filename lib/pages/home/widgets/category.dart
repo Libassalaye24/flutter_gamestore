@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_app/pages/home/widgets/newest.dart';
 import 'package:my_first_flutter_app/pages/home/widgets/popular.dart';
 
 class CategorySection extends StatelessWidget {
@@ -29,20 +30,17 @@ class CategorySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
+    
       height: 500,
-      decoration: const BoxDecoration(
-          color: Color(0xFFF6F8FF),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
-          )),
+      
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
             height: 140,
             child: ListView.separated(
+              
               padding: const EdgeInsets.symmetric(horizontal: 25),
               scrollDirection: Axis.horizontal,
               itemBuilder: ((context, index) => Column(
@@ -90,8 +88,18 @@ class CategorySection extends StatelessWidget {
               ),
             ),
           ),
-          const PopularGame()
+           PopularGame(),
 
+           Container(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: const Text('Newest game', 
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
+          ),
+        //  NewestGame(),
         ],
       ),
     );

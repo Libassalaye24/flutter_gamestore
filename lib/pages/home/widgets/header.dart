@@ -8,7 +8,6 @@ class HeaderSection extends StatelessWidget {
     return Padding(
     
       padding: EdgeInsets.only(
-      
         top: MediaQuery.of(context).padding.top,
         left: 25,
         right: 25,
@@ -18,7 +17,6 @@ class HeaderSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
         Column(
-          
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
           Text("Welcome to LM app, " , style: TextStyle(

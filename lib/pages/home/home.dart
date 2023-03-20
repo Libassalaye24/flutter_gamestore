@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_app/pages/home/widgets/header.dart';
-import 'package:my_first_flutter_app/pages/home/widgets/popular.dart';
 import 'package:my_first_flutter_app/pages/home/widgets/search.dart';
 import 'package:my_first_flutter_app/pages/home/widgets/category.dart';
 
@@ -11,9 +10,11 @@ class HomePage extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-           
+        
             backgroundColor: const Color(0xFF5F67EA),
             body: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              
                 child: Stack(
                   children: [
                     Transform(transform: Matrix4.identity()..rotateZ(20),
@@ -34,6 +35,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Column(
                       children: [
+
                         const HeaderSection(),
                         const SearchSection(),
                         CategorySection(),
